@@ -46,61 +46,13 @@
     </build>
 
     <profiles>
+
         <profile>
-            <id>arquillian-weld-ee-embedded</id>
+            <id>wildfy</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.spec</groupId>
-                    <artifactId>jboss-javaee-6.0</artifactId>
-                    <version>1.0.0.Final</version>
-                    <type>pom</type>
-                    <scope>provided</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-                    <version>1.0.0.CR3</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.jboss.weld</groupId>
-                    <artifactId>weld-core</artifactId>
-                    <version>1.1.5.Final</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-simple</artifactId>
-                    <version>1.6.4</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
 
-        <profile>
-            <id>arquillian-glassfish-embedded</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-glassfish-embedded-3.1</artifactId>
-                    <version>1.0.0.CR3</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>org.glassfish.main.extras</groupId>
-                    <artifactId>glassfish-embedded-all</artifactId>
-                    <version>3.1.2</version>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-
-        <profile>
-            <id>wildfy81-embedded</id>
-            <!-- the dependencies for Wildfly8.1  -->
             <dependencies>
                 <dependency>
                     <groupId>org.wildfly</groupId>
@@ -151,6 +103,15 @@
             <groupId>org.jboss.arquillian.junit</groupId>
             <artifactId>arquillian-junit-container</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!--jee-->
+        <dependency>
+            <groupId>org.jboss.spec</groupId>
+            <artifactId>jboss-javaee-7.0</artifactId>
+            <version>1.0.3.Final</version>
+            <type>pom</type>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
