@@ -6,4 +6,5 @@
     <engine>
         <property name="deploymentExportPath">target/deployments</property>
     </engine>
+
 </arquillian>
