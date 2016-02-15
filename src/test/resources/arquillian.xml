@@ -7,4 +7,11 @@
         <property name="deploymentExportPath">target/deployments</property>
     </engine>
 
+    <container qualifier="wildlfy" default="true">
+        <configuration>
+            <property name="managementAddress">127.0.0.1</property>
+            <property name="managementPort">9990</property>
+        </configuration>
+    </container>
+
 </arquillian>

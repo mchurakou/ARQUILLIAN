@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <wildfly.path>d:\DEV-TOOLS\wildfly-9.0.0.Final\</wildfly.path>
+        <wildfly.path>d:\DEV-TOOLS\wildfly-9.0.0.Final</wildfly.path>
     </properties>
 
 
@@ -60,6 +60,7 @@
                     <artifactId>wildfly-arquillian-container-embedded</artifactId>
                     <version>8.2.1.Final</version>
                 </dependency>
+
                 <dependency>
                     <groupId>org.wildfly</groupId>
                     <artifactId>wildfly-embedded</artifactId>
@@ -79,14 +80,30 @@
                             <systemPropertyVariables>
                                 <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                                 <!-- the maven dependency plugin will have already downloaded the server on /target -->
-                                <jboss.home>d:\Dev-Tool\wildfly-9.0.2.Final\</jboss.home>
-                                <module.path>d:\Dev-Tool\wildfly-9.0.2.Final\modules</module.path>
+                                <jboss.home>${wildfly.path}</jboss.home>
+                                <module.path>${wildfly.path}\modules</module.path>
                             </systemPropertyVariables>
                             <redirectTestOutputToFile>false</redirectTestOutputToFile>
                         </configuration>
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+
+        <profile>
+            <id>wildfy-remote</id>
+
+            <dependencies>
+
+
+                <dependency>
+                    <groupId>org.wildfly.arquillian</groupId>
+                    <artifactId>wildfly-arquillian-container-remote</artifactId>
+                    <version>1.0.2.Final</version>
+                    <scope>test</scope>
+                </dependency>
+
+            </dependencies>
         </profile>
     </profiles>
 
