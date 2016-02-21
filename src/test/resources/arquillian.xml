@@ -7,7 +7,7 @@
         <property name="deploymentExportPath">target/deployments</property>
     </engine>
 
-    <container qualifier="wildlfy" default="true">
+    <container qualifier="wildlfy-remote">
         <configuration>
             <property name="managementAddress">localhost</property>
             <property name="managementPort">9990</property>

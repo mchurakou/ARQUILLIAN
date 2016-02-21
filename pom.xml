@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <wildfly.path>d:\DEV-TOOLS\wildfly-9.0.0.Final</wildfly.path>
+        <wildfly.path>d:\Dev-Tool\wildfly-9.0.2.Final\</wildfly.path>
     </properties>
 
 
@@ -104,6 +104,20 @@
                 </dependency>
 
             </dependencies>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <systemPropertyVariables>
+                                <arquillian.launch>wildlfy-remote</arquillian.launch>
+                            </systemPropertyVariables>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
